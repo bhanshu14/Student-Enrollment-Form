@@ -30,17 +30,39 @@ This project is a web-based student enrollment form designed to store student de
 
 ## Examples of Use
 1. **Creating a New Student Record**
-   - A user can fill in the form with student details (name, age, email, course) and submit it. The details are stored in JsonPowerDB, and a success message is displayed.
-   
+   - A user fills in the form with student details (Roll no., Name, Class, Birthdate, Address, and Enrollment date) and submits it. The details are stored in JsonPowerDB, and the user receives a success message.
+
    Example Input:
    ```json
    {
+     "roll_no": "101",
      "name": "John Doe",
-     "age": 18,
-     "email": "john.doe@example.com",
-     "course": "Computer Science"
+     "class": "10th Grade",
+     "birthdate": "2006-03-15",
+     "address": "123 , Springfield",
+     "enrollment_date": "2024-09-01"
+   }
+2. **Reading a Specific Student Record**
+   -A user can search for a specific student by Roll no. or Name and retrieve their details.
+
+   Example Input:
+   '''json
+   {
+      "roll_no": "101"
    }
 
+   **Example Response**
+   ```json
+   {
+      "roll_no": "101",
+      "name": "Emily Rose",
+      "class": "10th Grade",
+      "birthdate": "2006-03-15",
+      "address": "123 Maple Street, Springfield",
+      "enrollment_date": "2023-09-01"
+    }
+
+  
 
 ## Release History
 ### v1.0.0 (Initial Release)
